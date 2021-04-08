@@ -1,4 +1,4 @@
-package com.sdwtech.mynotesapp.adapter
+package com.sdwtech.consumerapp.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sdwtech.mynotesapp.CustomOnItemClickListener
-import com.sdwtech.mynotesapp.NoteAddUpdateActivity
-import com.sdwtech.mynotesapp.R
-import com.sdwtech.mynotesapp.databinding.ItemNoteBinding
-import com.sdwtech.mynotesapp.entity.Note
+import com.sdwtech.consumerapp.CustomOnItemClickListener
+import com.sdwtech.consumerapp.NoteAddUpdateActivity
+import com.sdwtech.consumerapp.R
+import com.sdwtech.consumerapp.databinding.ItemNoteBinding
+import com.sdwtech.consumerapp.entity.Note
 
 class NoteAdapter(private val activity: Activity): RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     var listNotes = ArrayList<Note>()

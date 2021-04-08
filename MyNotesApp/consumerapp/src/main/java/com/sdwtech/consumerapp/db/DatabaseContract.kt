@@ -1,4 +1,4 @@
-package com.sdwtech.mynotesapp.db
+package com.sdwtech.consumerapp.db
 
 import android.net.Uri
 import android.provider.BaseColumns

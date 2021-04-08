@@ -1,20 +1,19 @@
-package com.sdwtech.mynotesapp
+package com.sdwtech.consumerapp
 
 import android.content.Intent
 import android.database.ContentObserver
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import com.sdwtech.mynotesapp.adapter.NoteAdapter
-import com.sdwtech.mynotesapp.databinding.ActivityMainBinding
-import com.sdwtech.mynotesapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.sdwtech.mynotesapp.db.NoteHelper
-import com.sdwtech.mynotesapp.entity.Note
-import com.sdwtech.mynotesapp.helper.MappingHelper
+import com.sdwtech.consumerapp.adapter.NoteAdapter
+import com.sdwtech.consumerapp.databinding.ActivityMainBinding
+import com.sdwtech.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.sdwtech.consumerapp.entity.Note
+import com.sdwtech.consumerapp.helper.MappingHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Notes"
+        supportActionBar?.title = "Consumer Notes"
 
         binding.rvNotes.layoutManager = LinearLayoutManager(this)
         binding.rvNotes.setHasFixedSize(true)
@@ -76,8 +75,6 @@ class MainActivity : AppCompatActivity() {
     private fun loadNotesAsync() {
         GlobalScope.launch(Dispatchers.Main) {
             binding.progressbar.visibility = View.VISIBLE
-            val noteHelper = NoteHelper.getInstance(applicationContext)
-            noteHelper.open()
             val deferredNotes = async(Dispatchers.IO) {
                 val cursor = contentResolver.query(CONTENT_URI, null, null, null, null)
                 MappingHelper.mapCursorToArrayList(cursor)

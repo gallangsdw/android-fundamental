@@ -1,4 +1,4 @@
-package com.sdwtech.mynotesapp
+package com.sdwtech.consumerapp
 
 import android.app.AlertDialog
 import android.content.ContentValues
@@ -9,13 +9,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.sdwtech.mynotesapp.databinding.ActivityNoteAddUpdateBinding
-import com.sdwtech.mynotesapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.sdwtech.mynotesapp.db.DatabaseContract.NoteColumns.Companion.DATE
-import com.sdwtech.mynotesapp.db.DatabaseContract.NoteColumns.Companion.DESCRIPTION
-import com.sdwtech.mynotesapp.db.DatabaseContract.NoteColumns.Companion.TITLE
-import com.sdwtech.mynotesapp.entity.Note
-import com.sdwtech.mynotesapp.helper.MappingHelper
+import com.sdwtech.consumerapp.databinding.ActivityNoteAddUpdateBinding
+import com.sdwtech.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.sdwtech.consumerapp.db.DatabaseContract.NoteColumns.Companion.DATE
+import com.sdwtech.consumerapp.db.DatabaseContract.NoteColumns.Companion.DESCRIPTION
+import com.sdwtech.consumerapp.db.DatabaseContract.NoteColumns.Companion.TITLE
+import com.sdwtech.consumerapp.entity.Note
+import com.sdwtech.consumerapp.helper.MappingHelper
 import java.text.SimpleDateFormat
 import java.util.*
 

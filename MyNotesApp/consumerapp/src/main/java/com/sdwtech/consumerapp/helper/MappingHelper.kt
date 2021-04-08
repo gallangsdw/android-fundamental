@@ -1,8 +1,8 @@
-package com.sdwtech.mynotesapp.helper
+package com.sdwtech.consumerapp.helper
 
 import android.database.Cursor
-import com.sdwtech.mynotesapp.db.DatabaseContract
-import com.sdwtech.mynotesapp.entity.Note
+import com.sdwtech.consumerapp.db.DatabaseContract
+import com.sdwtech.consumerapp.entity.Note
 
 object MappingHelper {
 
