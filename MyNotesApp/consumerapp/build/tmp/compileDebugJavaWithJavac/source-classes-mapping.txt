@@ -1,0 +1,8 @@
+com/sdwtech/consumerapp/databinding/ActivityMainBinding.java
+ com.sdwtech.consumerapp.databinding.ActivityMainBinding
+com/sdwtech/consumerapp/BuildConfig.java
+ com.sdwtech.consumerapp.BuildConfig
+com/sdwtech/consumerapp/databinding/ActivityNoteAddUpdateBinding.java
+ com.sdwtech.consumerapp.databinding.ActivityNoteAddUpdateBinding
+com/sdwtech/consumerapp/databinding/ItemNoteBinding.java
+ com.sdwtech.consumerapp.databinding.ItemNoteBinding
